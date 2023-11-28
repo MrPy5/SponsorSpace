@@ -23,15 +23,21 @@
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-   
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <script src = "app.js"></script>
-      
-      <h1>Sponsor Sync</h1>
-      <button onclick = "googleLogin()">
-        Login with Google
-      </button>
     
+    <div id="sticky-header">
+      <div id = "header-content">
+        <button id = "login-button" class = "button-17" onclick = "googleLogin()">
+          Login with <img id = "google" src="google.png" alt="google">
+        </button>
+        <img id = "logo" src="IMG_7224.jpg" alt="LOGO">
+        <h1 id = "title">Sponsor Syncs</h1>
+        
+      </div>
+    </div>
+   
   </body>
 </html>

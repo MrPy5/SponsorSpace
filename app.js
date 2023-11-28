@@ -12,7 +12,6 @@ function googleLogin() {
     firebase.auth().signInWithPopup(provider).then(result => {
         const user = result.user;
         document.write(user.displayName);
-        <br></br>
         document.write(user.email);
         console.log(user);
     })
