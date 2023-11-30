@@ -23,13 +23,20 @@
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
     <script src = "app.js"></script>
     
     <div id="sticky-header">
       <div id = "header-content">
+        <div id = "signout-container">
+          
+          <button id = "signout-button" class = "button-17" onclick = "signout()">Sign Out</button>
+          <h1 id = "name"></h1>
+        </div>
+        
         <button id = "login-button" class = "button-17" onclick = "googleLogin()">
           Login with <img id = "google" src="google.png" alt="google">
         </button>

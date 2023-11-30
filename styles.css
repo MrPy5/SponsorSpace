@@ -30,11 +30,20 @@ p {
    
     font-family: "Verdana";
 }
+#name {
+  float: right;
+  font-family: "Verdana";
+  font-size: 15px;
+}
 #login-button {
     float: right;
     width: 12%;
     padding: 0%;
     
+}
+#signout-button {
+  float: right;
+  
 }
 #google {
     height: 60%;
