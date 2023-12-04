@@ -1,7 +1,11 @@
 //Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 //https://www.youtube.com/watch?v=9kRgVxULbag
 
+
+
 document.addEventListener("DOMContentLoaded", event => {
+    
+    
 
     const app = firebase.app();
     console.log(app);
@@ -34,3 +38,14 @@ function signout() {
     localStorage.clear();
     window.location.replace("/index.html");
 }
+
+function writeUserData(userId, name, email, imageUrl) {
+    
+    
+    firebase.database().ref('Products/' + userId).set({
+      username: name,
+      email: email,
+      profile_picture : imageUrl
+    });
+  }
+  
