@@ -2,17 +2,20 @@
 //https://www.youtube.com/watch?v=9kRgVxULbag
 
 
-
 document.addEventListener("DOMContentLoaded", event => {
     
     
 
     const app = firebase.app();
+    const db = firebase.firestore();
+
+
     console.log(app);
     
     var loginButton = document.getElementById('login-button');
     var nameDisplay = document.getElementById('name');
     var signoutContainer = document.getElementById('signout-container');
+
     if (localStorage.getItem("SessionUserEmail") == null) {
         signoutContainer.style.display = "none";
     }
@@ -39,13 +42,10 @@ function signout() {
     window.location.replace("/index.html");
 }
 
-function writeUserData(userId, name, email, imageUrl) {
+function writeUserData(productName) {
     
-    
-    firebase.database().ref('Products/' + userId).set({
-      username: name,
-      email: email,
-      profile_picture : imageUrl
-    });
+    const db = firebase.firestore();
+    const product = db.collection('Products').doc(productName);
+    product.set({user: localStorage.getItem("SessionUserEmail")});
   }
   
