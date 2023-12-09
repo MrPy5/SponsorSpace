@@ -5,9 +5,7 @@ body {
 h1 {
     color: #FCF6F5;
 }
-p {
-    color: red;
-}
+
 
 #sticky-header {
     position: fixed;
@@ -27,8 +25,27 @@ p {
 }
 #title {
     padding-left: 80px;
-   
     font-family: "Verdana";
+}
+#headings {
+  font-family: "Verdana";
+  margin-bottom: 10px;
+}
+#content {
+  padding-left: 50px;
+}
+
+.option {
+  font-family: "Verdana";
+  padding: 10px;
+  width: 75%;
+  height: 75px;
+  border-radius: 24px;
+  border: 2px solid #990011;
+  background-color: #F5F5F5;
+}
+.option-header {
+  font-size: 20px;
 }
 #name {
   float: right;
@@ -43,6 +60,7 @@ p {
 }
 #signout-button {
   float: right;
+  margin-left: 10px;
   
 }
 #google {
