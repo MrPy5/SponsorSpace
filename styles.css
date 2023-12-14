@@ -24,8 +24,9 @@ h1 {
     float: left;
 }
 #title {
-    padding-left: 80px;
+    padding-left: 20px;
     font-family: "Verdana";
+    float: left;
 }
 #headings {
   font-family: "Verdana";
@@ -46,6 +47,18 @@ h1 {
 }
 .option-header {
   font-size: 20px;
+}
+.link {
+  float: left;
+  padding-left: 30px;
+  color: white;
+  font-family: "Verdana";
+  text-decoration: none;
+  padding-top: 30px;
+  
+}
+.link:hover {
+  color: #006799;
 }
 #name {
   float: right;
