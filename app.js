@@ -70,9 +70,11 @@ function googleLogin() {
 
         const db = firebase.firestore();
         const userCollection = db.collection('Users').doc(user.email);
-        userCollection.set({email: user.email, name: user.displayName, role: "creator"});
+        userCollection.set({email: user.email, name: user.displayName, role: "creator"}).then(() => {
+            console.log(user);
+            window.location.replace("/index.html");
+        });
 
-        console.log(user);
         
         
 
@@ -93,18 +95,27 @@ function addSomething() {
             var creatorName = prompt("Name")
             var creatorDescription = prompt("Describe Yourself ")
             const product = db.collection('Creators').doc(creatorName);
-            product.set({user: localStorage.getItem("SessionUserEmail"), description: creatorDescription});
+            product.set({user: localStorage.getItem("SessionUserEmail"), description: creatorDescription}).then(() => {
+                console.log("wait");
+                window.location.replace("/index.html");
+            });
+            
         }
         if (doc.data().role == "sponsor") {
             var sponsorName = prompt("Name")
             var sponsorDescription = prompt("Describe Yourself ")
             const product = db.collection('Sponsors').doc(sponsorName);
-            product.set({user: localStorage.getItem("SessionUserEmail"), description: sponsorDescription});
+            product.set({user: localStorage.getItem("SessionUserEmail"), description: sponsorDescription}).then(() => {
+                console.log("wait");
+                window.location.replace("/index.html");
+            });
+            
         }
+        
     });
     
     
-    //window.location.replace("/index.html");
+    
     
 
 
